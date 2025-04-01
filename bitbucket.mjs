@@ -24,7 +24,7 @@ const decodeMultipartValues = (event) => {
     if (!body) return {};
     if (event?.isBase64Encoded) {
         try {
-            body = Buffer.from(body, 'base64').toString('utf8')
+            body = Buffer.from(body, 'base64');
         } catch {
             return {};
         }
